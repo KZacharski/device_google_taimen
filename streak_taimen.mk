@@ -12,10 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Inherit some common Project arrow stuff.
-$(call inherit-product, vendor/arrow/config/common.mk)
-DEVICE_MAINTAINER := ReallySnow
-TARGET_BOOT_ANIMATION_RES := 1440
+# ProjectStreak properties
+ TARGET_BOOT_ANIMATION_RES := 1080
+ STREAK_BUILD_TYPE := UNOFFICIAL
 
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
@@ -25,7 +24,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, device/google/taimen/aosp_taimen.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := arrow_taimen
+PRODUCT_NAME := streak_taimen
 PRODUCT_DEVICE := taimen
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Pixel 2 XL
